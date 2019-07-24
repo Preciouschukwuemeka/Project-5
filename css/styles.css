@@ -16,11 +16,12 @@ html, body {
 body {
     font-family: "Nunito", sans-serif;
     text-align: center;
-    background: rgba(235, 235, 235, 0.9);
+    background: lightseagreen;
 }
 
 header {
     padding: 15px 5px 5px;
+    
 }
 
 .header-inner-container {
@@ -29,8 +30,8 @@ header {
 }
 
 header h1 {
-    font-size: 1.25em;
-    color: rgba(50, 50, 50, 0.9);
+    font-size: 2.00em;
+    color:black;
     margin-top: 35px;
 }
 
@@ -41,6 +42,8 @@ header h1 {
     max-width: 20rem;
     transition: .4s ease-out;
     outline: none;
+    background: black;
+    color: red;
 }
 
 .search-input:active, .search-input:hover, .search-input:focus {
@@ -55,6 +58,7 @@ header h1 {
     border: 1px solid rgba(200, 200, 200, 0.9);
     transition: .4s ease-out;
     outline: none;
+    
 }
 
 .search-submit:active, .search-submit:hover, .search-submit:focus {
@@ -75,6 +79,7 @@ header h1 {
     width: 100%;
     max-width: 1200px;
     margin: auto;
+    background:black;
 }
   
 .card {
@@ -92,6 +97,8 @@ header h1 {
     border: 1px solid rgba(50, 50, 50, 0.3);
     transition: .4s ease-out;
     overflow: hidden;
+    color:maroon;
+    background:goldenrod;
 }
 
 .card-img {
@@ -113,6 +120,7 @@ header h1 {
     color: rgba(50, 50, 50, 0.7);
     margin: 7px auto;
     transition: .4s ease-out;
+    color: blue;
 }
 
 .cap {
@@ -131,6 +139,8 @@ header h1 {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.7);
+    color: blue;
+    background-color: black;
 }
 
 .modal {
@@ -144,6 +154,9 @@ header h1 {
     border-radius: 0.25em;
     border: 1px solid rgba(100, 100, 100, 0.3);
     transition: .4s ease-out;
+    color: maroon;
+    background-color: goldenrod;
+
 }
 
 .modal-close-btn {
@@ -169,7 +182,7 @@ header h1 {
 }
 
 .modal-text {
-    color: rgba(50, 50, 50, 0.7);
+    color: blue;
     margin: 10px;
 }
 
@@ -188,7 +201,7 @@ header h1 {
     max-width: 420px;
     padding: 10px 15px 15px;;
     margin: 10px auto auto;
-    background: rgba(255, 255, 255, 1);
+    background: black;
     border-radius: 0.25em;
     border: 1px solid rgba(100, 100, 100, 0.3);
 }
@@ -199,12 +212,13 @@ header h1 {
     cursor: pointer;
     font-size: 0.85em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.9);
+    color: brown;
     padding: 0.75em 1.5em;
-    background: rgba(0, 0, 0, 0.8);
+    background:black;
     border-radius: 0.35em;
     transition: .4s ease-out;
     outline: none;
+    background-color:black;
   }
   
 
