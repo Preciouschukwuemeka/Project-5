@@ -154,7 +154,9 @@ function setModalData(item) {
 
 
 
-//    Creating Function that updates UserData in Modal  //  
+
+
+/***  Creating Function that updates UserData in Modal  ***/  
 
 
 function updateData(nr) {
@@ -167,7 +169,7 @@ function updateData(nr) {
     $(".modal-text").eq(2).html(`${item.cell}`);
     $(".modal-text").eq(3).html(`${item.location.street}, 
     ${item.location.city}, ${item.location.state} ${item.location.postcode}`);
-    $(".modal-text").eq(4).html(`Birthday: ${item.dob.date.split("T")[0]}`); // Split TS to only get Date
+    $(".modal-text").eq(4).html(`Birthday: ${item.dob.date.split("T")[0]}`);         
 }
 
 
@@ -175,30 +177,36 @@ function updateData(nr) {
 
 
 
-//   Opening modal with right information //
+
+
+/*** Opening modal with right information ***/
 
 
 $("#gallery").on("click", ".card", function () {
 
-    cardNr = $(this).index(); // Get current card index
-    indexOfClicked = cardsVis.indexOf(cardNr); // Get index within visible Cards
+    cardNr = $(this).index();                                                // Get current card index
+    indexOfClicked = cardsVis.indexOf(cardNr);                               // Get index within visible Cards
 
     // Get data
     updateData(cardNr);
 
     if (cardsVis.length === 1) {
-        $(".modal-btn-container").hide(); // Hide prev/next if only one search result
+        $(".modal-btn-container").hide();                                   // Hide prev/next if only one search result
     } else {
         $(".modal-btn-container").show();
     }
 
-    $(".modal-container").show(); // Show modal
+    $(".modal-container").show();                                                 // Show modal
 
 });
 
 
 
-// Creating Function for Modal Close Button.
+
+
+
+
+/***  Creating Function for Modal Close Button. ***/
 
 function modalButton() {
     $("#modal-close-btn").on("click", () => {
@@ -212,11 +220,14 @@ function modalButton() {
 
 
 
+
+
+
 /**  EXTRA CREDIT **/
 
 
 
-// Creating Search Bar //
+/***  Creating Search Bar ***/
 
 function addSearch() {
     $(".search-container").html(`
@@ -227,7 +238,9 @@ function addSearch() {
 
 
 
-//  Search functionality // 
+
+
+/***   Search functionality  ***/ 
     
     $(document).on("submit", "form", e => {
         e.preventDefault();
@@ -235,7 +248,8 @@ function addSearch() {
         let searchValue = $("#search-input").val().toLowerCase();
         cardsVis = [];
 
-        $(".card").hide(); // hide all cards again before showing them
+        $(".card").hide();                                                // hide all cards again before showing them
+
 
         // Search in firstname and lastname for search string
         if (searchValue === "") {
@@ -257,7 +271,8 @@ function addSearch() {
 
 
 
-//  Toggle through modal //    
+
+/***   Toggle through modal ***/    
 
 function toggle() {
     $(".modal-btn-container").on("click", ".btn", function () {
