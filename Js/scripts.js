@@ -4,12 +4,14 @@
     Project 5 - Public API Requests
 ***/
 
-//  NAME: Precious Chukwuemeka
+//  NAME: Precious C. Chukwuemeka
 
 
 
 
-//Defining Users Variable//
+
+
+/***  Defining Users Variable ***/
 
 
 let users = {
@@ -17,7 +19,7 @@ let users = {
 
     dob: {
         date: "Birthday",
-        age: 45
+        age: 30
     },
 
     email: "Email",
@@ -31,8 +33,8 @@ let users = {
 
     name: {
         title: "Mr/Mrs",
-        first: "John",
-        last: "Doe"
+        first: "Ralph",
+        last: "Burns"
     },
 
     picture: {
@@ -43,18 +45,24 @@ let users = {
 
 
 
-// Declaring other Global Variables.
+
+
+
+/*** Declaring other Global Variables. ***/
 
 let modal = "";
 let cardNr = 0;
-let cardsVis = []; // Array of index of Visible cards.
-let indexOfClicked = 0; // Index of card clicked on
+let cardsVis = [];                                                        // Array of index of Visible cards.
+let indexOfClicked = 0;                                                   // Index of card clicked on
 
 
 
 
-//  Retrieving data for 12 random “Employees”, Using the Random User Generator API "(https://randomuser.me/)",
-//  Also including functions to return various function calls on success.
+
+
+
+/***   Retrieving data for 12 random “Employees”, Using the Random User Generator API "(https://randomuser.me/)",
+  Also including functions to return various function calls on success. ***/
 
 
 $.ajax({
@@ -62,33 +70,36 @@ $.ajax({
     dataType: "json",
     success: function (data) {
 
-        createList(data.results); // Calling Create list function.
-        setModalData(users).insertAfter("#gallery").hide(); // Calling and hiding setModalData function initially.
-        modalButton(); //Calling close modal button function.
-        toggle(); // Add toggle button
-        UserArray(data.results); // Save array to variable
-        addSearch(); // Add search box
+        createList(data.results);                                          // Calling Create list function.
+        setModalData(users).insertAfter("#gallery").hide();                // Calling and hiding setModalData function initially.
+        modalButton();                                                     // Calling close modal button function.
+        toggle();                                                          // Calling toggle button function.
+        UserArray(data.results);                                   
+        addSearch();                                                       // Calling add search function.
     }
 });
 
 
 
-function UserArray(data) { // Save data to separate array.
+function UserArray(data) { 
     users = data;
 }
 
 
 
 
-/** "Create list" Function that Writes user data to website  **/
+
+
+/***  "Create list" Function that Writes user data to website. ***/
+
 
 function createList(users) {
     let listItem = "";
 
     $.each(users, function (index, item) {
 
-        listItem +=
-            `<div class="card">
+    listItem +=
+    `<div class="card">
         <div class="card-img-container">
             <img class="card-img" src="${item.picture.medium}" alt="profile picture">
         </div>
@@ -99,11 +110,12 @@ function createList(users) {
         </div>
     </div>`;
 
-        cardsVis.push(index); // array of visible card index before search
+        cardsVis.push(index);                                                  // array of visible card index before search
     });
 
-    $("#gallery").html(listItem); // Insert into #gallery
+    $("#gallery").html(listItem);                                              // Inserting List Item into #gallery.
 }
+
 
 
 

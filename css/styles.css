@@ -17,6 +17,13 @@ body {
     font-family: "Nunito", sans-serif;
     text-align: center;
     background: lightseagreen;
+
+}
+
+body {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo6W5kSYLxxuVN5JdwnTPENmSfD_9aptViD2bPv7_xhlkznVo3");
+    background-size:small;
+    
 }
 
 header {
@@ -31,7 +38,7 @@ header {
 
 header h1 {
     font-size: 2.00em;
-    color:black;
+    color:gold;
     margin-top: 35px;
 }
 
@@ -120,7 +127,7 @@ header h1 {
     color: rgba(50, 50, 50, 0.7);
     margin: 7px auto;
     transition: .4s ease-out;
-    color: blue;
+    color: black;
 }
 
 .cap {
